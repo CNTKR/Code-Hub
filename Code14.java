@@ -1,29 +1,37 @@
-package javaproject;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.Scanner;
-import java.util.Set;
-public class Code14 {
-	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
-		System.out.println("please enter the string to remove duplicates");
-		String line=sc.nextLine();
-		String result=removeduplistring(line);
-		System.out.println(result);
-	}
-	public static String removeduplistring(String line) {
-		Set<Character> set=new HashSet<>();
-		StringBuilder sb=new StringBuilder();
-		  for(int i=0;i<line.length();i++) {
-			  char c=line.charAt(i);
-			  if(!set.contains(c)) {
-			  set.add(c);
-			  sb.append(c);
-		  }
-		  }
-		return sb.toString();
-		
-		
-	}
 
-}
+/*
+ * Write a program to reverse a string preserving the position of spaces.
+ */
+package javaproject;
+import java.util.Scanner;
+public class Code13 {
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		System.out.println("please enter the string to reverse");
+		String input=sc.nextLine();
+		stringreverse(input);
+		 System.out.print(stringreverse(input));
+	}
+	private static String stringreverse(String input) {
+	char[] line=input.toCharArray();
+	int left =0, right =line.length-1;
+	while(left<right) {
+		if(line[left]==' ') {
+			left++;
+		}
+		else if(line[right]==' ') {
+			right--;
+		}else {
+			char temp=line[left];
+			line[left]=line[right];
+			line[right]=temp;
+			left++;
+			right--;
+		}
+		
+	}
+	return new String(line);
+		
+	
+
+}}

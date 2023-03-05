@@ -1,40 +1,24 @@
 /*
- * Write a program to print the elements of an array in spiral order.
+ * Write a program to remove duplicates from an array.
  */
 package javaproject;
-public class Code11 {
-	public static void main(String[] args) {
-		int[][] array= {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
-		spiralorder(array);
-	}
-	public static void spiralorder(int[][] array) {
-		int i;
-		int top=0, bottom=array.length-1, left=0, right=array[0].length-1;
-		while(top<=bottom && left<=right) {
-			//print top row
-			for(i=left;i<=right;i++) {
-				System.out.print(array[top][i]+" ");
-			}
-			top++;
-			//print right column
-			for(i=top;i<=bottom;i++) {
-				System.out.print(array[i][right]+" ");
-			}
-			right--;
-			//print bottom row
-			if(top<=bottom) {
-			for(i=right;i>=left;i--) {
-				System.out.print(array[bottom][i]+" ");
-			}
-			bottom--;
-			}
-			//print left column
-			if(left<=right) {
-			for(i=bottom;i>=top;i--) {
-				System.out.print(array[i][left]+" ");
-			}
-			
-			
+import java.util.LinkedHashSet;
+public class Code10 {
+	//Function to remove duplicate from array
+	public static void removeduplicates(int[] array) {
+		LinkedHashSet<Integer>set=new LinkedHashSet<Integer>();
+	//adding elements to LinkedhashSet
+		for(int i=0;i<array.length;i++) {
+			set.add(array[i]);
 		}
+		//printing the elements of LinkedHashSet
+		System.out.print(set);	
 	}
-}}
+	public static void main(String[] args) {
+		int[] array= {1,2,3,4,5,1,2,3,6,7,8,7};
+			//function call
+			removeduplicates(array);
+		}
+		
+	}
+

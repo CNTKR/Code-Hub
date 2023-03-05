@@ -1,24 +1,36 @@
 /*
- * Write a program to remove duplicates from an array.
+ * Write a program to print only the border elements of a 2-D array.
  */
 package javaproject;
-import java.util.LinkedHashSet;
-public class Code10 {
-	//Function to remove duplicate from array
-	public static void removeduplicates(int[] array) {
-		LinkedHashSet<Integer>set=new LinkedHashSet<Integer>();
-	//adding elements to LinkedhashSet
-		for(int i=0;i<array.length;i++) {
-			set.add(array[i]);
-		}
-		//printing the elements of LinkedHashSet
-		System.out.print(set);	
-	}
+import java.util.Scanner;
+public class Code9 {
 	public static void main(String[] args) {
-		int[] array= {1,2,3,4,5,1,2,3,6,7,8,7};
-			//function call
-			removeduplicates(array);
-		}
-		
+		int i,j,rows,cols;
+		// Read the number of rows and columns
+		Scanner sc=new Scanner(System.in);
+		System.out.println("please enter the no of rows");
+		rows=sc.nextInt();
+		System.out.println("please enter the no of columns");
+		cols=sc.nextInt();
+		        int[][] array=new int[rows][cols];
+		     // Read the elements of the array from input
+		        System.out.println("please enter the values inside an array");
+		        for(i=0;i<rows;i++) {
+		        	for(j=0;j<cols;j++) {
+		        	 array[i][j]=sc.nextInt();
+		        	}
+		        	System.out.println();
+		        }
+		    
+		        for(i=0;i<rows;i++) {
+		        	for(j=0;j<cols;j++) {
+		        		//condition to print only border elements of 2-D array
+		        		if(i==0||i==rows-1||j==0||j==cols-1)
+		        		System.out.print(array[i][j]+" ");
+		        	}
+		        	System.out.println();
+		        }	
 	}
+	}
+
 

@@ -1,37 +1,24 @@
-
 /*
- * Write a program to reverse a string preserving the position of spaces.
+ * Write a program to calculate the frequency of vowels, consonants, digits and other special characters present in a string.
  */
 package javaproject;
 import java.util.Scanner;
-public class Code13 {
+public class Code12 {
 	public static void main(String[] args) {
-		Scanner sc= new Scanner(System.in);
-		System.out.println("please enter the string to reverse");
-		String input=sc.nextLine();
-		stringreverse(input);
-		 System.out.print(stringreverse(input));
+		int num1,num2,num,temp,result=0,remainder;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("please enter the number to check");
+		num1=sc.nextInt();
+		System.out.println("please enter the second number");
+		num2=sc.nextInt();
+			for(int i=num1;i<=num2;i++) {
+				while(num1>num2) {
+				num=i;
+				temp=num%10;
+				result+=temp*temp*temp;
+				temp/=10;	
 	}
-	private static String stringreverse(String input) {
-	char[] line=input.toCharArray();
-	int left =0, right =line.length-1;
-	while(left<right) {
-		if(line[left]==' ') {
-			left++;
-		}
-		else if(line[right]==' ') {
-			right--;
-		}else {
-			char temp=line[left];
-			line[left]=line[right];
-			line[right]=temp;
-			left++;
-			right--;
-		}
-		
-	}
-	return new String(line);
-		
-	
-
-}}
+			if(result == i){
+				System.out.print(i);
+			}
+	}}}

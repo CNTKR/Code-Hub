@@ -1,5 +1,5 @@
 /*
- * Write a program to rotate the elements of an array by ‘k’ times.
+ * Write a program to rotate the elements of an array by k times.
  */
 package javaproject;
 import java.util.Arrays;

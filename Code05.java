@@ -1,5 +1,5 @@
 /*
- *
+ *Write a program to print all the even numbers between 'a' & 'b' where 'â' & 'b'are integers entered by the user.
  */
 package javaproject;
 import java.util.Scanner;
@@ -14,8 +14,7 @@ public class Program3 {
 	System.out.print("Even numbers b/w "+num1+" to "+num2+": ");
 	//loop runs from num1 to num2
 	for(i=num1;i<=num2;i++) {
-	//if i divided by 2
-	//i is even 
+	
 		if(i%2==0) {
 			System.out.print(i+" ");
 		}
